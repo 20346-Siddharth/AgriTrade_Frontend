@@ -278,6 +278,16 @@ margin-left: 11rem;
   margin-left: 1rem;
   transition: border-color 0.3s ease-in-out;
 }
+.inputBox {
+  border: 1.6px solid #3a3939;
+  width: 20rem;
+  color: #111010;
+  border-radius: 3px;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  transition: border-color 0.3s ease-in-out;
+}
 .form-column input:hover {
   border-color: #007bff;
 }

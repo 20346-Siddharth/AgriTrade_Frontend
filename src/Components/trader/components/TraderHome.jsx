@@ -4,7 +4,7 @@ function TraderHome() {
   const[tableData,setTableData]=useState([])
 useEffect(()=>{
   fetchData();
-})
+},[])
 
   const fetchData = () => {
     fetch('http://localhost:4000/api/getAllCrops')

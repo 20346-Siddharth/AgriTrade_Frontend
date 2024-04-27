@@ -19,7 +19,7 @@ function AddBill() {
         estimatedWeight: "",
         actualWeight: "",
         price: "",
-        buyerID:"",
+       
         
       });
     
@@ -45,6 +45,12 @@ function AddBill() {
         })
           .then((response) => response.json())
           .then((data) => {
+            if(data.done){
+              alert("Purchase Added Successfully")
+            }
+            else{
+              alert("Error adding Purchase")
+            }
             console.log(data);
             // Handle response as needed
           })
@@ -120,16 +126,7 @@ function AddBill() {
                     onChange={handlePurchaseFormChange}
                   />
                 </div>
-                <div>
-                  <label htmlFor="totalAmount">Total Amount</label>
-                  <input
-                    type="text"
-                    id="totalAmount"
-                    name="totalAmount"
-                    value={purchaseFormData.totalAmount}
-                    onChange={handlePurchaseFormChange}
-                  />
-                </div>
+                
                 <div className="row1">
                   <button className="purchase-button">
                     <span>Submit</span>
