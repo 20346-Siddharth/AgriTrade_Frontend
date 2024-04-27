@@ -1,0 +1,198 @@
+/* ///////////////////sign up login forget css///////// */
+
+.signupcontainer {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter UI", sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.page {
+  background: #e2e2e5;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 40px);
+  position: absolute;
+  place-content: center;
+  width: calc(100% - 40px);
+}
+
+.container {
+  display: flex;
+  height: 320px;
+  margin: 0 auto;
+  width: 640px;
+}
+
+.left {
+  background: white;
+  height: calc(100% - 40px);
+  top: 20px;
+  position: relative;
+  width: 45%;
+  border-radius: 3px;
+}
+
+.login {
+  font-size: 28px;
+  font-weight: 900;
+  margin: 2px 49px 40px;
+}
+
+.eula {
+  color: #999;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: -5rem;
+  padding: 50px;
+}
+
+.right {
+  background: #474a59;
+  box-shadow: 0px 0px 40px 16px rgba(0, 0, 0, 0.22);
+  color: #e7e7ed;
+  position: relative;
+  height: calc(100% - -6%);
+  border-radius: 8px;
+  width: 100%;
+}
+
+.form {
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+label {
+  color: #c2c2c5;
+  display: block;
+  font-size: 16px;
+  height: 16px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.input-container {
+  width: 48%;
+  position: relative;
+}
+
+input {
+  background: transparent;
+  border: none;
+  color: #f2f2f2;
+  font-size: 15px;
+  height: 24px;
+
+  border-radius: 0;
+  width: 100%;
+  border-bottom: 1px solid rgb(49, 48, 48);
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 1px solid #000;
+}
+
+input::-moz-focus-inner {
+  border: 0;
+}
+button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #10618d;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 17px;
+  padding: 16px;
+  width: 130px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 20px 7rem;
+}
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button span:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+
+button:hover span {
+  padding-right: 15px;
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.bottomLine {
+  margin-top: 20rem;
+  margin-left: 8rem;
+}
+.bottomLine a {
+color: #e7e7ed;
+/* text-decoration: none; */
+}
+.profileicon {
+  height: 70px;
+  width: 70px;
+  margin: 1rem 4rem;
+}
+/* /////////////login.//// */
+.form1 {
+  top: 3rem;
+  margin-left: 8rem;
+  position: absolute;
+}
+.right1 {
+  background: #474a59;
+  box-shadow: 0px 0px 40px 16px rgba(0, 0, 0, 0.22);
+  color: #e7e7ed;
+  position: relative;
+  height: calc(100% - -1%);
+  border-radius: 8px;
+  width: 80%;
+}
+.left1 {
+  background: white;
+  height: calc(100% - 40px);
+  top: 20px;
+  position: relative;
+  width: 50%;
+  border-radius: 3px;
+}
+.input-container1 {
+  width: 60%;
+  margin-left: 3rem;
+  position: relative;
+}
+.row1 {
+  margin-left: -6rem;
+  justify-content: space-between;
+}
+.bottomLine1 {
+  margin-top: 18rem;
+  margin-left: 8rem;
+}
+.bottomLine1 a {
+  color: #e7e7ed;
+  text-decoration: none;
+  }

@@ -1,0 +1,499 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #f3f5f9;
+}
+
+.wrapper {
+  display: flex;
+  position: relative;
+  overflow: auto;
+}
+
+.wrapper .sidebar {
+  width: 200px;
+  height: 100%;
+  background: #474a59;
+  padding: 30px 0px;
+  position: fixed;
+}
+
+.wrapper .sidebar h2 {
+  color: #e9e3e3;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.wrapper .sidebar ul li {
+  padding: 20px;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.wrapper .sidebar ul li a {
+  color: #e6e3f5;
+  display: block;
+}
+
+.wrapper .sidebar ul li a .fas {
+  width: 25px;
+}
+
+.wrapper .sidebar ul li:hover {
+  background-color: #3e7099;
+}
+
+.wrapper .sidebar ul li:hover a {
+  color: #111010;
+}
+
+.wrapper .main_content {
+  width: 100%;
+  margin-left: 200px;
+  height: 10vh;
+  overflow: hidden;
+}
+
+.wrapper .main_content .header {
+  padding: 20px;
+  background: #fff;
+  color: #1d1c1c;
+  font-size: 20px;
+
+  border-bottom: 1px solid #e0e4e8;
+}
+
+.icon {
+  align-items: right;
+  text-align: right;
+  padding-right: 20px;
+
+  margin-top: -2rem;
+}
+.icon .fa {
+  font-size: 28px; /* Adjust the font size as needed */
+}
+
+.icon .fas {
+  font-size: 28px; /* Adjust the font size as needed */
+}
+.search {
+  display: flex; /* Use flexbox to arrange items in a row */
+  justify-content: flex-start; /* Align items to the left side */
+  gap: 2rem; /* Adjust the gap between items */
+  padding: 20px;
+  margin-left: 16rem;
+}
+
+.searchcontent {
+  margin-top: 1rem;
+}
+.searchcontent input[type="text"] {
+  padding: 22px;
+  width: 30%;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.searchbutton {
+  margin-left: 60rem;
+  margin-top: -5.6rem;
+  justify-content: space-between;
+}
+/* Assuming .table is the class for your table container */
+.child_render{
+  position: absolute;
+  width:70%;
+  left: 55%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+}
+.child_render .table {
+  
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: 55%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+
+  border: 1px solid black;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 9px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  font-size: 20px;
+  background-color: #f2f2f2;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #cfcfcf;
+}
+
+/* ////////////modal */
+
+.profile-details {
+  margin-top: 20px;
+  margin-left: 8rem;
+
+    flex-direction: column;
+
+  padding: 20px;
+ 
+}
+
+.profile-details p {
+  margin-bottom: 10px;
+  font-size: 17px;
+  font-weight: 550;
+  
+}
+
+
+
+.modal-overlay {
+  position: fixed; /* Use either 'fixed' or 'absolute', not both */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.modal {
+  
+  padding: 20px;
+  width:34%;
+  height:70%;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle box shadow */
+}
+
+
+.profileiconmodal {
+  height: 28px;
+  width: 28px;
+  position: absolute;
+  top: 10px;
+  right: 9rem;
+}
+
+.card {
+  background-image: linear-gradient(144deg,#edd2f2, #bab7cc 60%,#dec1ea);
+  border: none;
+  border-radius: 10px;
+  position: relative;
+  height:100%;
+  margin: auto;
+  font-family: inherit;
+}
+
+
+.card .job {
+  font-weight: 400;
+  color: 000;
+  margin-left: 11.5rem;
+  display: block;
+  padding-top: 5px;
+  font-size: 2em;
+}
+
+
+.card button {
+  padding: 10px 20px;
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+  border: none;
+  margin-top: 50px;
+  background: #e8e8e8;
+  color: #111111;
+  font-weight: 600;
+  margin-left: 0%;
+}
+.usermodal {
+  margin-top:1rem;
+  width: 100px; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
+  border-radius: 50%; /* To make it a circle */
+  margin-bottom: 2px;
+}
+.card button:hover {
+  background: #212121;
+  color: #ffffff;
+}
+.card-border-top{
+margin-left: 11rem;
+
+}
+/* /////////token///////// */
+.form-columns {
+  display: flex;
+  justify-content: space-between;
+  height: 80vh;
+  width: 90vw;
+}
+
+.form-column {
+  flex: 1rem;
+  margin-left: 15rem;
+
+  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+}
+.form-column input {
+  border: 1.6px solid #3a3939;
+  width: 20rem;
+  color: #111010;
+  border-radius: 3px;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  transition: border-color 0.3s ease-in-out;
+}
+.form-column input:hover {
+  border-color: #007bff;
+}
+.form-column label {
+  width: 18rem;
+  margin-left: 1rem;
+
+  color: #1d1c1c;
+  margin-bottom: 0.2rem;
+}
+.form-column1 {
+  flex: 1rem;
+  margin-left: 2rem;
+  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+  /* border: 2px solid #353434; */
+}
+.form-column1 label {
+  width: 18rem;
+  margin-left: 1rem;
+  color: #1d1c1c;
+  margin-top: 1rem;
+  margin-bottom: 0.2rem;
+}
+.form-column1 input {
+  border: 1.6px solid #3a3939;
+  width: 20rem;
+  color: #111010;
+  border-radius: 3px;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  transition: border-color 0.3s ease-in-out;
+}
+.form-column1 input:hover {
+  border-color: #007bff;
+}
+
+.tokenform label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* /////////////////////update/////////////// */
+.form-column2 {
+  width: 50vw;
+  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+  margin-left: 20rem;
+  border: 1px solid black;
+  margin-top: 5rem;
+  text-align: center;
+}
+.form-column2 h2 {
+  font-size: 24px;
+  /* top:8rem; */
+}
+.form-column2 label {
+  width: 23rem;
+  text-align: center;
+  color: #1d1c1c;
+  margin-top: 1rem;
+
+  align-items: center;
+  margin-left: 3rem;
+  margin-bottom: 0.2rem;
+}
+.form-column2 input {
+  border: 1.6px solid #3a3939;
+  width: 25rem;
+  color: #111010;
+  border-radius: 5px;
+  text-align: left;
+  margin-top: 0.5rem;
+  height: 2rem;
+  margin-left: 1rem;
+  transition: border-color 0.3s ease-in-out;
+}
+.form-column2 input:hover {
+  border-color: #007bff;
+}
+
+/* ////////////////////Yesterday///////// */
+
+.table1 {
+  position: absolute;
+  width:70%;
+  left: 55%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+
+  border: 1px solid black;
+}
+
+/* -------------------farmerdash */
+.table2 {
+  position: absolute;
+  width:70%;
+  left: 55%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+
+  border: 1px solid black;
+}
+.search1 input {
+  margin-top: 2rem;
+  margin-left: 27rem;
+  /* width:20rem; */
+}
+.searchbutton1 {
+  margin-top: -4.5rem;
+  margin-left: 48rem;
+}
+
+.bookslot {
+  height:60vh;
+  margin-top: -14rem;
+  margin-left: 5rem;
+}
+.book {
+  max-height: 450px;
+}
+.book input {
+  height: 18x;
+}
+.bookslot-button {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  margin-left: 20rem;
+  margin-top: 0.6rem;
+}
+.process {
+  height: 50vh;
+  width: 50%;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #bdc5cd;
+  /* display: flex; */
+  align-items: center;
+  display: grid;
+  font-size: 2rem;
+  justify-content: center;
+}
+/* .process h2{
+  font-size:2rem;
+  text-align: center;
+
+}
+.process p{
+  font-size:2rem;
+  text-align: center;
+  
+} */
+.table3 {
+  position: absolute;
+  width:70%;
+  left: 55%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+
+  border: 1px solid black;
+}
+.history {
+  height: 50vh;
+  width: 60%;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  /* display: flex; */
+
+  justify-content: center;
+}
+/* ////////////////trader////////////// */
+.table4 {
+  position: absolute;
+  width:70%;
+  left: 55%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+
+  border: 1px solid black;;
+}
+.bookslots {
+  margin-top: 12%;
+  /* left:50%; */
+  /* top:50%; */
+  transform: translate(10%, -50%);
+}
+.purchase {
+  max-height: 450px;
+}
+.purchas input {
+  height: 18x;
+}
+.purchase-button {
+  height: 29px;
+  display: flex;
+  align-items: center;
+  margin-left: 25rem;
+  margin-top: 0.6rem;
+}
+
+
+.fa-edit, .fa-trash-alt{
+  margin-right: 8px;
+  width:1rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.fa-edit:hover, .fa-trash-alt:hover, .fa-ellipsis-v:hover {
+  color: #007bff; /* Change color on hover */
+}
