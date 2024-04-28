@@ -12,7 +12,8 @@ function ViewCommonSlips() {
         throw new Error('Network response was not ok');
       }
       const data = await response.json();
-      setTransactions(data);
+      console.log(data)
+      setTransactions(data.allTransections);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -22,7 +23,7 @@ function ViewCommonSlips() {
         <h1>All Transactions</h1>
       <ul>
         {transactions.map((transaction, index) => (
-          <li key={index}>{/* Render each transaction item here */}</li>
+          <li key={index}>{transaction._id}</li>
         ))}
       </ul>
     </div>

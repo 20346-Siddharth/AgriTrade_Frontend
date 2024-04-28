@@ -12,7 +12,8 @@ function AllVerifiedBuyers() {
         throw new Error('Network response was not ok');
       }
       const data = await response.json();
-      setBuyers(data);
+      console.log(data)
+      setBuyers(data.buyers);
     } catch (error) {
       console.error('Error fetching buyers:', error);
     }
@@ -23,7 +24,7 @@ function AllVerifiedBuyers() {
       <h1>Verified Buyers</h1>
       <ul>
         {buyers.map((buyer, index) => (
-          <li key={index}></li>
+          <li key={index}>{buyer._id}</li>
         ))}
       </ul>
     </div>

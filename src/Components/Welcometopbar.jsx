@@ -1,10 +1,36 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./admin/style/admindash.css";
 import Profile from "./Profile";
 import "./media/profile icon.png"
 import { Link, useNavigate } from "react-router-dom";
 import profileicon from "./media/profile icon.png";
 const Welcometopbar = () => {
+  const[user,setUser]=useState({})
+    useEffect(()=>{
+     profile();
+    },[])
+    function profile(){
+      const token = getCookie('token');
+      const url = "http://localhost:4000/api/profile";
+      fetch(url, {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${token}`
+          },
+          body: JSON.stringify({ token: token })
+      }).then((response) => response.json())
+      .then((data) => {
+          setUser(data);
+          console.log("USer Infp"+data);
+          console.log(user);
+      }).catch((error) => {
+          console.error('Error:', error);
+      });
+  }
+  
+ 
+  const [showModal, setShowModal] = useState(false);
     const openModal = () => {
         setShowModal(true);
       };
@@ -12,7 +38,7 @@ const Welcometopbar = () => {
       const closeModal = () => {
         setShowModal(false);
       };
-      const [showModal, setShowModal] = useState(false);
+     
       
 
       function getCookie(name) {
@@ -66,7 +92,7 @@ const Welcometopbar = () => {
 
 <div className="main_content">
           <div className="header">
-            Welcome!! Admin Dashboard.
+            Welcome!! {user.username} .
             <div className="icon">
               <i className="fa fa-bell icon"></i>
               <Link to="/adminlogin">
@@ -90,7 +116,7 @@ const Welcometopbar = () => {
             <div className="modal-overlay" onClick={closeModal}>
               <div className="modal">
                 <span className="modalclose">&times;</span>
-                <Profile />
+                <Profile user={user}/>
               </div>
             </div>
           )}

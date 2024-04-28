@@ -43,7 +43,7 @@ const LandingPage = () => {
         <section class="home">
           <div class="description">
             <h1 class="title">
-              <span style={{ color: "gradient-text" }}>E-Mandi</span>
+              <span style={{ color: "gradient-text" }}>AgriTrade Connect</span>
             </h1>
             <p class="paragraph">
               Welcome to E-Mandi Market, your one-stop destination for all your
