@@ -2,12 +2,16 @@ import React, { useState, useEffect } from 'react';
 import '../style/admindash.css';
 import '../style/adminpage.css';
 
-function Adminhome() {
+function Adminhome({searchContent}) {
   const [tableData, setTableData] = useState([]);
 
   useEffect(() => {
-    fetchData();
-  }, []);
+    if (searchContent && searchContent.length > 0) {
+      setTableData(searchContent);
+    } else {
+      fetchData();
+    }
+  }, [searchContent]);
 
   async function saveChanges(cropId, updatedCrop) {
     try {
@@ -74,7 +78,7 @@ function Adminhome() {
     newData[index][field] = value;
     setTableData(newData);
   };
-
+  // setTableData(searchContent)
   return (
     <div>
       <div className="table">
@@ -89,7 +93,7 @@ function Adminhome() {
             </tr>
           </thead>
           <tbody>
-            {tableData.map((crop, index) => (
+            {tableData && tableData.map((crop, index) => (
               <tr key={crop._id}>
                 <td>
                   <span

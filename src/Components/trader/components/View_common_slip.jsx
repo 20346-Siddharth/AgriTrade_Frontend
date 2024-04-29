@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react'
 
-function View_common_slip() {
+function View_common_slip({searchContent}) {
   const[slips,setSlips]=useState([]);
-  useEffect(()=>{
-    Adminslip();
-  },[])
+  useEffect(() => {
+    if (searchContent && searchContent.length > 0) {
+      setSlips(searchContent);
+    } else {
+      Adminslip();
+    }
+  }, [searchContent]);
   function getCookie(name) {
     const cookieString = document.cookie;
     const cookies = cookieString.split("; ");

@@ -29,8 +29,8 @@ function ViewCommonSlips() {
         
             }).then((response)=>response.json())
        .then((data) =>{
-           console.log(data)
-           setSlips(data)
+           console.log(data.slips)
+           setSlips(data.slips)
        })
 }
   return (

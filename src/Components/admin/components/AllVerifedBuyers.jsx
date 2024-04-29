@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
 
-function AllVerifiedBuyers() {
+function AllVerifiedBuyers({searchContent}) {
   const [buyers, setBuyers] = useState([]);
   useEffect(() => {
-    fetchBuyers();
-  }, []); 
+    if (searchContent && searchContent.length > 0) {
+      setBuyers(searchContent);
+    } else {
+      fetchBuyers();
+    }
+  }, [searchContent]);
   async function fetchBuyers() {
     try {
       const response = await fetch("http://localhost:4000/api/allVerifiedBuyers");

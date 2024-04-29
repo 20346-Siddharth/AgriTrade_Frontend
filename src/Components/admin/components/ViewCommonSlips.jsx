@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react';
 
-function ViewCommonSlips() {
+function ViewCommonSlips({searchContent}) {
   const [transactions, setTransactions] = useState([]);
-  useEffect(()=>{
-    fetchData();
-  },[])
+  useEffect(() => {
+    if (searchContent && searchContent.length > 0) {
+      setTransactions(searchContent);
+    } else {
+      fetchData();
+    }
+  }, [searchContent]);
+
   const fetchData = async () => {
     try {
       const response = await fetch('http://localhost:4000/api/seeAllTransections');

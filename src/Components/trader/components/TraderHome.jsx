@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react'
 
-function TraderHome() {
+function TraderHome({searchContent}) {
   const[tableData,setTableData]=useState([])
-useEffect(()=>{
-  fetchData();
-},[])
+  useEffect(() => {
+    if (searchContent && searchContent.length > 0) {
+      setTableData(searchContent);
+    } else {
+      fetchData();
+    }
+  }, [searchContent]);
 
   const fetchData = () => {
     fetch('http://localhost:4000/api/getAllCrops')

@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react'
 
-function See_Purchase() {
+function See_Purchase({searchContent}) {
    const[purchase,setPurchase]=useState([]);
 
-   useEffect(()=>{
-    seeMyPurchase();
-   },[])
+   useEffect(() => {
+    if (searchContent && searchContent.length > 0) {
+      setPurchase(searchContent);
+    } else {
+      seeMyPurchase();
+    }
+  }, [searchContent]);
 
   function getCookie(name) {
     const cookieString = document.cookie;
@@ -40,7 +44,7 @@ function See_Purchase() {
       See purchase
 
       {
-       purchase && purchase.map((purchase,index)=>(<span key={index}>{purchase._id} <br /></span>)) // call card here with data passed as props
+       purchase && purchase.map((purchase,index)=>(<span key={index}>{purchase.tokenNumber} <br /></span>)) // call card here with data passed as props
       }
     </div>
   )
