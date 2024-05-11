@@ -116,11 +116,11 @@ function Adminhome({searchContent}) {
                     dangerouslySetInnerHTML={{ __html: crop.closingprice }}
                   />
                 </td>
-                <td>
-                  <button onClick={() => saveChanges(crop._id, tableData[index])}>Save</button>
+                <td><button className="icon-btn" onClick={() => saveChanges(crop._id, tableData[index])}>
+                    <i className="fas fa-save"></i></button>
                 </td>
                 <td>
-                  <button onClick={() => deleteChanges(crop._id, tableData[index])}>Remove</button>
+                  <button className="icon-btn" onClick={() => deleteChanges(crop._id, tableData[index])}> <i className="fas fa-trash-alt"></i></button>
                 </td>
               </tr>
             ))}

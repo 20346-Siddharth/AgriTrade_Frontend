@@ -61,82 +61,91 @@ function AddBill() {
       };
   return (
     <div>
-      <div className="bookslot">
-            <div className="form-column2 purchase">
+          <div className="form_main">
+          <p className="heading">Add BILL</p>
             <form onSubmit={handlePurchaseFormSubmit}>
-              <h2>Purchase Form</h2>
-              <div>
-                <div>
-                  <label htmlFor="tokenNumber">Token Number</label>
+           
+       
+              <div className="inputContainer">
+                
                   <input
                     type="text"
                     id="tokenNumber"
-                    name="tokenNumber"
+                    className="inputField"
+                    placeholder="Token Number"
                     value={purchaseFormData.tokenNumber}
                     onChange={handlePurchaseFormChange}
                   />
                 </div>
-                <div>
-                  <label htmlFor="mobileNumber">Mobile Number</label>
+                <div className="inputContainer">
+                 
                   <input
                     type="text"
                     id="mobileNumber"
-                    name="mobileNumber"
+                    className="inputField"
+                    placeholder="Mobile Number"
                     value={purchaseFormData.mobileNumber}
                     onChange={handlePurchaseFormChange}
                   />
                 </div>
-                <div>
-                  <label htmlFor="cropName">Crop Name</label>
+                <div className="inputContainer">
+              
                   <input
                     type="text"
                     id="cropName"
-                    name="cropName"
+                    className="inputField"
+                    placeholder="Crop  Name"
                     value={purchaseFormData.cropName}
                     onChange={handlePurchaseFormChange}
                   />
                 </div>
-                <div>
-                  <label htmlFor="estimatedWeight">Estimated Weight</label>
+                <div className="inputContainer">
+                 
                   <input
                     type="text"
                     id="estimatedWeight"
-                    name="estimatedWeight"
+                    className="inputField"
+                    placeholder="Estimated Weight"
                     value={purchaseFormData.estimatedWeight}
                     onChange={handlePurchaseFormChange}
                   />
                 </div>
-                <div>
-                  <label htmlFor="actualWeight">Actual Weight</label>
+                <div className="inputContainer">
+                 
                   <input
                     type="text"
                     id="actualWeight"
-                    name="actualWeight"
+                    className="inputField"
+                    placeholder="Actual Weight"
                     value={purchaseFormData.actualWeight}
                     onChange={handlePurchaseFormChange}
                   />
                 </div>
-                <div>
-                  <label htmlFor="price">Price</label>
+                <div className="inputContainer">
+             
                   <input
                     type="text"
                     id="price"
+                    className="inputField"
+                    placeholder=" Price"
                     name="price"
                     value={purchaseFormData.price}
                     onChange={handlePurchaseFormChange}
                   />
                 </div>
                 
-                <div className="row1">
+                {/* <div className="row1">
                   <button className="purchase-button">
                     <span>Submit</span>
                   </button>
-                </div>
-              </div>
+                </div> */}
+                   <button id="button" type="submit">Add Bill</button>
+             
               </form>
-            </div>
-          </div>
-    </div>
+           
+        </div>
+        </div>
+  
   )
 }
 

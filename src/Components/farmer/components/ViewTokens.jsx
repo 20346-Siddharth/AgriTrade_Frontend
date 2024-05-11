@@ -46,24 +46,36 @@ function ViewTokens({searchContent}) {
   return (
     <div>
       {/* <button onClick={seeSlot}>See Book Slot</button> */}
-      <div>
-      <ul>
+    
+      <h1 className="cardh1">View Token</h1>
+      <div className="card-2">
+        <div className="h1-circle">
+        <ul id="h1-circle-ul-1">
         {searchtokens && searchtokens.map((token, index) => (
           <li key={index}>{token.tokennumber}</li>
         ))}
       </ul>
-        <h2>Active Tokens:</h2>
+      <div className="h1-circle">
+          <h2 className="card2">All Active Tokens</h2>
+          <ul id="h1-circle-ul-1">
         {activeToken && activeToken.map((ele, index) => (
           <span key={index}>{ele.tokennumber}</span>
         ))}
+           </ul>
       </div>
-      <div>
-        <h2>Expired Tokens:</h2>
+ 
+      <div className="h1-circle">
+          <h2 className="card3">All Expired Tokens</h2>
+          <ul id="h1-circle-ul-1">
         {expireToken && expireToken.map((ele, index) => (
           <span key={index}>{ele.tokennumber}</span>
         ))}
+           </ul>
       </div>
     </div>
+    </div>
+    </div>
+    
   );
 }
 

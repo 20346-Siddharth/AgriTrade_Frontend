@@ -69,28 +69,69 @@ const AddCommonSlip = () => {
   };
 
   return (
-    <div className='child_render2'>
+    <div className='form_main'>
+      <p className='heading'>Add Common Slip</p>
       <form onSubmit={handleSubmit}>
-        <label >Token</label>
-        <input type="text" name="tokenNumber" value={formData.tokenNumber} className="inputBox" onChange={handleInputChange} />
-        <br />
-        <label>Crop Name</label>
-        <input type="text" name="cropName" value={formData.cropName} className="inputBox"onChange={handleInputChange} />
-        <br />
-        <label>Price</label>
-        <input type="text" name="price" value={formData.price} className="inputBox"onChange={handleInputChange} />
-        <br />
-        <label>Estimated Weight</label>
-        <input type="text" name="estimatedWeight" value={formData.estimatedWeight} className="inputBox"onChange={handleInputChange} />
-        <br />
-        <label>Buyer ID</label>
-        <input type="text" name="buyerID" value={formData.buyerID} className="inputBox"onChange={handleInputChange} />
-        <br />
-        <input type="submit" value={submitting ? 'Submitting...' : 'Submit'} className="inputBox"disabled={submitting} />
+        <div className='inputContainer'>
+          <input
+            type='text'
+            className='inputField' 
+            name='tokenNumber'
+            value={formData.tokenNumber}
+            placeholder='Token'
+            onChange={handleInputChange}
+          />
+        </div>
+        <div className='inputContainer'> 
+          <input
+            type='text'
+            className='inputField' 
+            name='cropName'
+            value={formData.cropName}
+            placeholder='Crop Name'
+            onChange={handleInputChange}
+          />
+        </div>
+        <div className='inputContainer'> 
+          <input
+            type='text'
+            className='inputField' 
+            name='price'
+            value={formData.price}
+            placeholder='Price'
+            onChange={handleInputChange}
+          />
+        </div>
+        <div className='inputContainer'> 
+          <input
+            type='text'
+            className='inputField' 
+            name='estimatedWeight'
+            value={formData.estimatedWeight}
+            placeholder='Estimated Weight'
+            onChange={handleInputChange}
+          />
+        </div>
+        <div className='inputContainer'>
+          <input
+            type='text'
+            className='inputField'
+            name='buyerID'
+            value={formData.buyerID}
+            placeholder='Buyer ID'
+            onChange={handleInputChange}
+          />
+        </div>
+        <button
+  type='submit'
+  className='inputButton' // Change class to 'inputButton'
+  disabled={submitting}
+>
+  {submitting ? 'Submitting...' : 'Submit'}
+</button>
       </form>
     </div>
   );
 };
 
 export default AddCommonSlip;
-

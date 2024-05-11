@@ -22,7 +22,7 @@ const Farmerdash = () => {
     }
     return null;
   }
-  const [selectedRoute, setSelectedRoute] = useState("traderhome");
+  const [selectedRoute, setSelectedRoute] = useState("farmerhome");
 
   const [searchValue, setSearchValue] = useState("");
   const [searchContent, setSearchContent] = useState([]);

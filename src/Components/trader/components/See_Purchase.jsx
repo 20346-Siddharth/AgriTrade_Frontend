@@ -41,12 +41,18 @@ function See_Purchase({searchContent}) {
 }
   return (
     <div>
-      See purchase
+     <h1 className="cardh1">See Purchase</h1>
+    <div class="card-2">
+   
+        <div class="h1-circle">
+            
 
       {
        purchase && purchase.map((purchase,index)=>(<span key={index}>{purchase.tokenNumber} <br /></span>)) // call card here with data passed as props
       }
     </div>
+    </div>
+     </div>
   )
 }
 

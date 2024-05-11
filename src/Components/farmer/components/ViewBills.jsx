@@ -46,7 +46,12 @@ function ViewBills({searchContent}) {
 
   return (
     <div>
-      <ul>
+       <h1 className="cardh1">Bills Views</h1>
+    <div class="card-2">
+   
+        <div class="h1-circle">
+            
+        <ul id="h1-circle-ul-1">
         {farmerSells.map((sell, index) => (
           <li key={index}>
              {sell.tokenNumber}
@@ -54,6 +59,8 @@ function ViewBills({searchContent}) {
         ))}
       </ul>
     </div>
+    </div>
+     </div>
   )
 }
 

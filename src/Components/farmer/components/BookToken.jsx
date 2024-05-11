@@ -39,14 +39,14 @@ function BookToken() {
   }
 
   return (
-    <div>
-      <button onClick={bookSlot}>Book Slot</button>
-      <label htmlFor="date">
-        Date
-      </label>
-      <input type="date" onChange={handleDate} />
-    </div>
-  );
+    <div className="book-token-container">
+    <button onClick={bookSlot}>Book Slot</button>
+    <label htmlFor="date" className="book-token-label">
+      Date
+    </label>
+    <input type="date" onChange={handleDate} className="book-token-input" />
+  </div>
+);
 }
 
 export default BookToken;

@@ -25,12 +25,19 @@ function ViewCommonSlips({searchContent}) {
   };
   return (
     <div>
-        <h1>All Transactions</h1>
-      <ul>
+    
+        <h1 className="cardh1">All Transactions</h1>
+        <div class="card-2">
+   
+   <div class="h1-circle">
+       
+   <ul id="h1-circle-ul-1">
         {transactions.map((transaction, index) => (
           <li key={index}>{transaction._id}</li>
         ))}
       </ul>
+    </div>
+    </div>
     </div>
   )
 }

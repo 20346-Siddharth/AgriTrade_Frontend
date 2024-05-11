@@ -17,22 +17,22 @@ const Tradersidebar = ({onRouteChange}) => {
       </li>
           <li  onClick={() => handleButtonClick("verifybuyer")}>
           
-          <i className="fas fa-home"></i>Verify Buyer
+          <i className="	fas fa-neuter"></i>Verify Buyer
        
       </li>
           <li  onClick={() => handleButtonClick("View_Common_Slip")}>
           
-          <i className="fas fa-home"></i>View Common Slip
+          <i className="	fas fa-clone"></i>View Common Slip
        
       </li>
           <li  onClick={() => handleButtonClick("Addbill")}>
           
-          <i className="fas fa-home"></i>Add Bill
+          <i className="	fas fa-plus"></i>Add Bill
        
       </li>
           <li  onClick={() => handleButtonClick("see_purchase")}>
           
-          <i className="fas fa-home"></i>See Purchases
+          <i className="	fas fa-folder-plus"></i>See Purchases
        
       </li>
          

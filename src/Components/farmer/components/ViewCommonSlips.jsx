@@ -35,11 +35,17 @@ function ViewCommonSlips() {
 }
   return (
     <div>
-      <h1>Slips are</h1>
+       <h1 className="cardh1">Slip</h1>
+      <div class="card-2">
+   
+   <div class="h1-circle">
+       
       {
        slips && slips.map((slip,index)=>(<span key={index}>{slip.tokenNumber} <br /></span>)) // call card here with data passed as props
       }
     </div>
+    </div>
+     </div>
   )
 }
 

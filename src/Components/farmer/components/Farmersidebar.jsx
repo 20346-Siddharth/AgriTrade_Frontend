@@ -17,22 +17,22 @@ const Farmersidebar = ({ onRouteChange }) => {
       </li>
           <li  onClick={() => handleButtonClick("booktoken")}>
           
-          <i className="fas fa-home"></i>Book Token
+          <i className="	fas fa-clone"></i>Book Token
        
       </li>
           <li  onClick={() => handleButtonClick("view_common_slip")}>
           
-          <i className="fas fa-home"></i>Common Slips
+          <i className="fas fa-list-alt"></i>Common Slips
        
       </li>
           <li  onClick={() => handleButtonClick("view_bills")}>
           
-          <i className="fas fa-home"></i>Bills
+          <i className="fas fa-clone"></i>Bills
        
       </li>
           <li  onClick={() => handleButtonClick("view_token")}>
           
-          <i className="fas fa-home"></i>Previous Tokens
+          <i className="fas fa-list-ol"></i>Previous Tokens
        
       </li>
            

@@ -14,7 +14,7 @@ function AddNewCrop() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ cropname:cropName, startingprice:startingPrice, closingprice:closingPrice }),
+        body: JSON.stringify({ cropname: cropName, startingprice: startingPrice, closingprice: closingPrice }),
       });
 
       if (!response.ok) {
@@ -32,44 +32,62 @@ function AddNewCrop() {
       alert('Error adding crop. Please try again.');
     }
   };
+
   return (
-    <div>
-    <h2>Add Crop</h2>
-    <form onSubmit={handleSubmit}>
-      <label>
-        Crop Name:
-        <input
-          type="text"
-          value={cropName}
-          onChange={(e) => setCropName(e.target.value)}
-          required
-        />
-      </label>
-      <br />
-      <label>
-        Starting Price:
-        <input
-          type="number"
-          value={startingPrice}
-          onChange={(e) => setStartingPrice(e.target.value)}
-          required
-        />
-      </label>
-      <br />
-      <label>
-        Closing Price:
-        <input
-          type="number"
-          value={closingPrice}
-          onChange={(e) => setClosingPrice(e.target.value)}
-          required
-        />
-      </label>
-      <br />
-      <button type="submit">Add Crop</button>
-    </form>
-  </div>
-  )
+  //   <div className="searchcontent">
+  //   <div className="search">
+  //     <input type="text" placeholder="Name..." />
+  //     <input type="text" placeholder="Crop..." />
+  //   </div>
+  //   <div className="searchbutton">
+  //     <button>
+  //       <span>Search</span>
+  //     </button>
+  //   </div>
+  // </div>
+  // </div>
+
+    <div className="form_main">
+      <p className="heading">Add Crop</p>
+      <form onSubmit={handleSubmit}>
+        <div className="inputContainer">
+          <input
+            type="text"
+            className="inputField"
+            id="cropName"
+            placeholder="Crop Name"
+            value={cropName}
+            onChange={(e) => setCropName(e.target.value)}
+            required
+          />
+        </div>
+        <div className="inputContainer">
+          <input
+            type="number"
+            className="inputField"
+            id="startingPrice"
+            placeholder="Starting Price"
+            value={startingPrice}
+            onChange={(e) => setStartingPrice(e.target.value)}
+            required
+          />
+        </div>
+        <div className="inputContainer">
+          <input
+            type="number"
+            className="inputField"
+            id="closingPrice"
+            placeholder="Closing Price"
+            value={closingPrice}
+            onChange={(e) => setClosingPrice(e.target.value)}
+            required
+          />
+        </div>
+        <button id="button" type="submit">Add Crop</button>
+      </form>
+     
+    </div>
+  );
 }
 
-export default AddNewCrop
+export default AddNewCrop;
